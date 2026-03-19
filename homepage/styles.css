@@ -1,0 +1,37 @@
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    background-color: gray;
+  }
+
+  li a {
+    display: block;
+  }
+
+  .container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+}
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+
+  div {
+    margin: 15px;
+  }
+
+  .hiddentext {
+    display: none;
+  }
+  label {
+    font-style: italic;
+  }

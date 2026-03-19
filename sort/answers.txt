@@ -1,0 +1,47 @@
+sort1 uses: bubble sort
+
+How do you know?: Using sort1, the time to sort different text files is as follows:
+
+    random10000.txt: real    0m0.342s
+    random50000.txt: real    0m7.867s
+    reversed10000.txt: real  0m0.270s
+    reversed50000.txt: real  0m5.451s
+    sorted10000.txt: real    0m0.080s
+    sorted50000.txt: real    0m0.497s
+
+    Based on the information collected, the big O, or the upper-bound of steps required to sort 10,000 and 50,000 numbers is a lot bigger than the Omega, or the lower-bound.
+    When tested with sorted numbers, the time taken is almost instantaneous because bubble sort only need to go through the numbers one time if everything is already in place.
+    Therefore, the results rules out the possibility of selection sort or merge sort.
+
+sort2 uses: merge sort
+
+How do you know?: Using sort2, the time to sort different text files is as follows:
+
+    random10000.txt: real    0m0.105s
+    random50000.txt: real    0m0.556s
+    reversed10000.txt: real  0m0.060s
+    reversed50000.txt: real  0m0.520s
+    sorted10000.txt: real    0m0.083s
+    sorted50000.txt: real    0m0.469s
+
+    Compared with the time recorded in sort3, the average time needed to sort 10,000 and 50,000 numbers in different orders are shorter.
+    There are also very little differences between the upper- and lower-bound of time needed to sort 10,000 and 50,000 numbers in different orders.
+    Because merge sort can build up an entire array very quickly despite the size of the array, it has a much lower upper-bound compared to bubble or selection sort, however, the lower-bound of steps required are just as much.
+    And because of this, the evidence suggests that sort2 uses a merge sorting algorithm.
+
+sort3 uses: selection sort
+
+How do you know?: Using sort3, the time to sort different text files is as follows:
+
+    random10000.txt: real   0m0.180s
+    random50000.txt: real   0m3.179s
+    reversed10000.txt: real 0m0.167s
+    reversed50000.txt: real 0m3.209s
+    sorted10000.txt: real   0m0.180s
+    sorted50000.txt: real   0m3.155s
+
+    When compared with the time recorded in sort2, the average time needed to sort different sets of numbers are higher.
+    The upper- and lower-bound of time taken is also close to each other when sorting the same size of numbers in different order.
+    Because of this we could assume the program has a theta running time, in which the upper- and lower-bound has the same amount of steps taken to finish the process.
+    These shows that sort3 uses selection sort.
+

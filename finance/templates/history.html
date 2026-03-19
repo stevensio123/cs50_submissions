@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">SYMBOL</th>
+            <th scope="col">Stock Name</th>
+            <th scope="col">Date bought</th>
+            <th scope="col">Date Sold</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price / share</th>
+            <th scope="col">Current Share Price </th>
+            <th scope="col">Value</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in portfolio %}
+            <tr>
+                <th scope="row">{{ row.symbol }}</th>
+                <td>{{ row.stock_name }}</td>
+                <td class="table-success">{{ row.date_bought }}</td>
+                <td class="table-info">{{ row.date_sell }}</td>
+                <td>{{ row.shares }}</td>
+                <td>{{ row.date_bought_pps }}</td>
+                <td>{{ row.market_value| usd }}</td>
+                <td>{{ row.date_bought_value| usd }}</td>
+             
+
+            </tr>
+            {% endfor%}
+
+        </tbody>
+        <thead>
+            <tr>
+                <th>Current Balance:</th>
+                <td>{{ cash | usd }}</td>
+            </tr>
+        </thead>
+
+    </table>
+
+
+{% endblock %}

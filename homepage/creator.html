@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="nav nav-pills nav-fill">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About me</a>
+                <a class="nav-link active" aria-current="page" href="#">About my Creator</a>
+                <a class="nav-link" href="contact.html">Contact me</a>
+              </nav>
+        </div>
+        <div class="container text-center position-absolute top-50 start-50 translate-middle"">
+            <button id = "revealbtn" type="button" class="btn btn-outline-primary" onclick="reveal()"> Click me to reveal the creator</button>
+            <div class="row">
+              <div class="col">
+                <img id="image" src="" width = "300" class="rounded mx-auto d-block" />
+              </div>
+              <div class="col">
+                <div class="hiddentext" id="text">
+                  <h2>Hi, I am Steven!</h2>
+                  <h2> What is your name?</h2>
+                  <form>
+                    <div class="form-group">
+                      <label for="username">Your name is:</label>
+                      <input class="form-control" id="username" rows="1"></input>
+                      <p></p>
+                      <button class="btn btn-primary" type="button" onclick="greet()">--></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <script>
+           function reveal(){
+                document.getElementById("image").src ="images/creator.jpg";
+                document.getElementById("text").style.display = 'block';
+                document.getElementById("revealbtn").style.display ='none';
+            }
+            function greet(){
+                let username = document.getElementById("username").value;
+                document.getElementById("text").style.fontSize = "x-large";
+                document.getElementById("text").innerHTML = username + '! Nice to meet YOU!';
+            }
+        </script>
+    </body>
+</html>
